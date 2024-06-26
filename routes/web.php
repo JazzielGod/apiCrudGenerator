@@ -10,8 +10,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('products', ProductController::class)->middleware(['auth', 'verified'])->name('index', 'products.index');
-Route::resource('categories', CategoryController::class)->middleware(['auth', 'verified'])->name('index', 'categories.index');
+Route::resource('products', ProductController::class)->middleware(['auth', 'verified'])->name('index', 'products');
+Route::resource('categories', CategoryController::class)->middleware(['auth', 'verified'])->name('index', 'categories');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
